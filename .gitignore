@@ -1,0 +1,6 @@
+.gitignore
+.idea/
+Obsever.txt
+patterns.iml
+pom.xml
+target/
