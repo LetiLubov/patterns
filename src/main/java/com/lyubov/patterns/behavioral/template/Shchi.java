@@ -2,16 +2,16 @@ package com.lyubov.patterns.behavioral.template;
 
 public class Shchi extends CookingSoups {
     @Override
-    protected void addFirstIngredient() {
+    public void addFirstIngredient() {
         System.out.println("Добавить капусты");
     }
 
     @Override
-    protected void addSecondIngredient() {
+    public void addSecondIngredient() {
         System.out.println("Еще капусты");
     }
     @Override
-    protected void writeTitle() {
+    public void writeTitle() {
         System.out.println("Готовим Щи");
     }
 }

@@ -2,22 +2,22 @@ package com.lyubov.patterns.behavioral.template;
 
 public class Borsh extends CookingSoups {
     @Override
-    protected void addFirstIngredient() {
+    public void addFirstIngredient() {
         System.out.println("Добавить свеклу");
     }
 
     @Override
-    protected void addSecondIngredient() {
+    public void addSecondIngredient() {
         System.out.println("Добавить мяса");
     }
 
     @Override
-    protected void writeTitle() {
+    public void writeTitle() {
         System.out.println("Готовим Борщ");
     }
 
     @Override
-    protected void addSeсretIngredient(){
+    public void addSeсretIngredient(){
         System.out.println("Борщ готов, сударыня!");
     }
 }
