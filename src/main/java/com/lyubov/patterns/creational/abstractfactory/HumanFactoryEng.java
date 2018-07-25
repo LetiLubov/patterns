@@ -1,4 +1,4 @@
-package creational.abstractfactory;
+package com.lyubov.patterns.creational.abstractfactory;
 
 public class HumanFactoryEng implements HumanFactory {
     @Override

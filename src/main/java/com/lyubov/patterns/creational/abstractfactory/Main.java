@@ -1,4 +1,4 @@
-package creational.abstractfactory;
+package com.lyubov.patterns.creational.abstractfactory;
 
 /**
  * Универсального механизм создания ресурсов. Во время выполнения приложение создает и использует конкретные экземпляры

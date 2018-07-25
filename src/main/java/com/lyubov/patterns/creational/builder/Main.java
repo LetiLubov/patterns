@@ -1,4 +1,4 @@
-package creational.builder;
+package com.lyubov.patterns.creational.builder;
 
 public class Main {
     public static void main(String[] args){
