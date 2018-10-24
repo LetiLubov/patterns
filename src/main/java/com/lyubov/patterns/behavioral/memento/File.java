@@ -1,5 +1,8 @@
 package com.lyubov.patterns.behavioral.memento;
 
+/**
+ * Шкатулка с сохранением
+ */
 public class File {
     private Save save;
     public Save getSave() {

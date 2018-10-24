@@ -3,7 +3,9 @@ package com.lyubov.patterns.behavioral.mediator;
 import java.util.ArrayList;
 import java.util.List;
 
-//Concrete mediator
+/**
+ * Concrete mediator
+ */
 public class LyubaChat implements Chat {
     private List<Client> users = new ArrayList();
     private Client admin;

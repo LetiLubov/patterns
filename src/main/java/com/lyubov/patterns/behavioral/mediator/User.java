@@ -1,5 +1,8 @@
 package com.lyubov.patterns.behavioral.mediator;
 
+/**
+ * Обычный пользователь (ConcreteClient)
+ */
 public class User implements Client {
     private String nickName;
 
@@ -16,12 +19,10 @@ public class User implements Client {
         return nickName;
     }
 
-    @Override
     public void getMessage(String message) {
         System.out.println(nickName + " получил сообщение - " + message);
     }
 
-    @Override
     public void sendMessage(String message) {
         System.out.println(nickName + " отправил сообщение \"" + message + "\"");
         chat.sendMessage(message, this);

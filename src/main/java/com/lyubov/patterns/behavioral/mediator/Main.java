@@ -17,14 +17,14 @@ package com.lyubov.patterns.behavioral.mediator;
 public class Main {
     public static void main(String[] args){
         LyubaChat lyubaChat = new LyubaChat();
-        Admin lyubava = new Admin(lyubaChat);
+        Admin admin = new Admin(lyubaChat);
         User pashka = new User(lyubaChat);
         pashka.setnickName("Pasha");
         User vitaliy = new User(lyubaChat);
         vitaliy.setnickName("Vetch");
 
         //добавляем пользователей в чат
-        lyubaChat.setAdmin(lyubava);
+        lyubaChat.setAdmin(admin);
         lyubaChat.addUser(vitaliy);
         lyubaChat.addUser(pashka);
 
@@ -32,6 +32,6 @@ public class Main {
 
         //тест чата
         vitaliy.sendMessage("Hi");
-        lyubava.sendMessage("hi, gyus");
+        admin.sendMessage("hi, gyus");
     }
 }
