@@ -3,10 +3,10 @@ package com.lyubov.patterns.structural.decorator;
 import java.util.Collection;
 import java.util.Set;
 
-public class ConcreteLyubavaSet<T> extends LyubavaSet<T> {
+public class ConcreteMySet<T> extends MySet<T> {
     private int addCount = 0;
 
-    public ConcreteLyubavaSet(Set<T> s) {
+    public ConcreteMySet(Set<T> s) {
         super(s);
     }
 

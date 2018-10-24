@@ -23,7 +23,6 @@ public class Main {
             soup.recipe();
             System.out.println("---");
         }
-
     }
 }
 
