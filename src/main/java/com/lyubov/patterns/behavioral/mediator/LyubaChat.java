@@ -5,12 +5,12 @@ import java.util.List;
 
 //Concrete mediator
 public class LyubaChat implements Chat {
-    private List<Client> users = new ArrayList<>();
+    private List<Client> users = new ArrayList();
     private Client admin;
     public void setAdmin(Client admin) {
         this.admin = admin;
     }
-    @Override
+
     public void sendMessage(String message, Client client) {
         for (Client user : users) {
             user.getMessage("(" + client.getNickName() + "): " + message);

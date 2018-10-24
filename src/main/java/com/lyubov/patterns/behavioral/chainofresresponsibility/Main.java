@@ -6,16 +6,24 @@ package com.lyubov.patterns.behavioral.chainofresresponsibility;
  * другому объекту.
  * Хороший пример: банкомат. Сначала надо разменять по сотке, потом по 50 и т.д.
  * Реализация: Логгеры. Есть консольный и файловый логгер, они цепляются друг друга и логируют
+ *
+ * @author Lyubov Ruzanova
  */
 public class Main {
 
     static public void main(String[] args) {
-        Logger warnings = new ConsoleLogger(Level.TRACE);
-        Logger errors = new FileLogger(Level.ERROR);
+        Logger warnings = new ConsoleLogger(LevelConstants.TRACE);
+        Logger errors = new FileLogger(LevelConstants.ERROR);
+
         warnings.setNext(errors);
-        warnings.writeMessage("ERROR", Level.ERROR);
-        warnings.writeMessage("WARN", Level.WARN);
-        warnings.writeMessage("TRACE", Level.TRACE);
+
+        System.out.println("====");
+        warnings.writeMessage("ERROR", LevelConstants.ERROR);
+        System.out.println("====");
+        warnings.writeMessage("WARN", LevelConstants.WARN);
+        System.out.println("====");
+        warnings.writeMessage("TRACE", LevelConstants.TRACE);
+        System.out.println("====");
     }
 }
 

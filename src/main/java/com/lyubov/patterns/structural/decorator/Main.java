@@ -19,7 +19,7 @@ import java.util.HashSet;
  */
 public class Main {
     public static void main(String[] args) {
-        ConcreteLyubavaSet<String> lyubavaSet = new ConcreteLyubavaSet<String>(new HashSet<>());
+        ConcreteLyubavaSet<String> lyubavaSet = new ConcreteLyubavaSet<String>(new HashSet());
 
         lyubavaSet.add("new string value 1");
         lyubavaSet.add("new string value 2");

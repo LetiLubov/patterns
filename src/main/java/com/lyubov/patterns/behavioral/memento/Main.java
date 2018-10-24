@@ -8,7 +8,7 @@ package com.lyubov.patterns.behavioral.memento;
  *
  * Game - игра, изменчивая среда
  * Save - слепок момента aka сохранение
- * File - шкатулка, куда можно положить сейв
+ * RunnableFile - шкатулка, куда можно положить сейв
  */
 public class Main {
     public static void main(String[] args) {

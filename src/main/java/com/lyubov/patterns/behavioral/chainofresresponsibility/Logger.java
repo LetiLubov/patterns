@@ -1,5 +1,9 @@
 package com.lyubov.patterns.behavioral.chainofresresponsibility;
 
+/**
+ * Абстрактный класс логгеров
+ * @author Lyubov Ruzanova
+ */
 public abstract class Logger {
     private int priority;
 
@@ -16,6 +20,11 @@ public abstract class Logger {
         this.next = next;
     }
 
+    /**
+     * Логгирует сообщение, если проходит по уровеню и передает следующему, если есть
+     * @param message - сообщение
+     * @param level - уровень
+     */
     public void writeMessage(String message, int level){
         if (level <= priority)
             customMessage(message);

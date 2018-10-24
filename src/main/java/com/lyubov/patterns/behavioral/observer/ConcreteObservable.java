@@ -8,7 +8,7 @@ import java.util.List;
  * Изменения спровоциораваны в changeStateConcreteObserver() и хотим оповестить всех наблюдателей.
  */
 public class ConcreteObservable implements Observable {
-    private List<Observer> observers = new ArrayList<>();
+    private List<Observer> observers = new ArrayList();
     private int valueField;
     public void changeStateConcreteObserver(int valueField) {
         this.valueField = valueField;
