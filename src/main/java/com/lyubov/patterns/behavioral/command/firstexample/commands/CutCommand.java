@@ -1,0 +1,31 @@
+package com.lyubov.patterns.behavioral.command.firstexample.commands;
+
+import com.lyubov.patterns.behavioral.command.firstexample.editor.Editor;
+
+/**
+ * Конкретная команда
+ */
+public class CutCommand extends Command {
+
+    public CutCommand(Editor editor) {
+        super(editor);
+    }
+
+    @Override
+    public boolean execute() {
+        if (editor.textField.getSelectedText() == null || editor.textField.getSelectedText().isEmpty()) return false;
+
+        backup();
+        String source = editor.textField.getText();
+        editor.clipboard = editor.textField.getSelectedText();
+        editor.textField.setText(cutString(source));
+        return true;
+    }
+
+    private String cutString(String source) {
+        String start = source.substring(0, editor.textField.getSelectionStart());
+        String end = source.substring(editor.textField.getSelectionEnd(), source.length());
+        return start + end;
+    }
+}
+
